@@ -61,21 +61,24 @@
     <h1>🐔 Suresh Royal Poultry Farm</h1>
     <p><b>Fresh Eggs & Healthy Chickens Direct from Farm</b></p>
 
-    <h2>Our Products</h2>
+    <h2>Our Products & Prices</h2>
 
     <div class="product">
         <img src="https://images.unsplash.com/photo-1589927986089-35812388d1f4">
         <p>Fresh Eggs 🥚</p>
+        <p><b>Price: ₹6 per egg</b></p>
     </div>
 
     <div class="product">
         <img src="https://images.unsplash.com/photo-1606728035253-49e8a231d6d4">
         <p>Broiler Chickens 🐓</p>
+        <p><b>Price: ₹220 per kg</b></p>
     </div>
 
     <div class="product">
         <img src="https://images.unsplash.com/photo-1563281578-c5c8b66b1f9b">
         <p>Country Chickens 🐔</p>
+        <p><b>Price: ₹450 per kg</b></p>
     </div>
 
     <h2>Contact Us</h2>
@@ -99,6 +102,9 @@
             <option>Broiler Chicken</option>
             <option>Country Chicken</option>
         </select><br>
+
+        <label>Quantity:</label><br>
+        <input type="number" name="quantity" placeholder="Enter quantity" required><br>
 
         <label>Delivery Type:</label><br>
         <select name="delivery">
@@ -129,6 +135,7 @@
         let name = document.querySelector("[name='name']").value;
         let phone = document.querySelector("[name='phone']").value;
         let product = document.querySelector("[name='product']").value;
+        let quantity = document.querySelector("[name='quantity']").value;
         let delivery = document.querySelector("[name='delivery']").value;
         let address = document.querySelector("[name='address']").value;
 
@@ -136,6 +143,7 @@
 Name: ${name}%0A
 Phone: ${phone}%0A
 Product: ${product}%0A
+Quantity: ${quantity}%0A
 Delivery: ${delivery}%0A
 Address: ${address}`;
 
@@ -149,3 +157,4 @@ Address: ${address}`;
 
 </body>
 </html>
+
