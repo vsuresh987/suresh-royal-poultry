@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Suresh Royal Poultry Farm</title>
+
+    <style>
+        body {
+            background-color: #f0fff0;
+            font-family: Arial;
+            text-align: center;
+        }
+
+        h1 { color: green; }
+        h2 { color: darkgreen; }
+
+        img {
+            width: 200px;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        .product { margin-bottom: 20px; }
+
+        button {
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover { background-color: darkgreen; }
+
+        form {
+            background-color: #e6ffe6;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        input, select {
+            padding: 8px;
+            width: 220px;
+            margin-bottom: 10px;
+        }
+
+        .note { font-size: 14px; color: gray; }
+        .delivery { color: darkgreen; font-weight: bold; }
+
+        .whatsapp {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🐔 Suresh Royal Poultry Farm</h1>
+    <p><b>Fresh Eggs & Healthy Chickens Direct from Farm</b></p>
+
+    <h2>Our Products</h2>
+
+    <div class="product">
+        <img src="https://images.unsplash.com/photo-1589927986089-35812388d1f4">
+        <p>Fresh Eggs 🥚</p>
+    </div>
+
+    <div class="product">
+        <img src="https://images.unsplash.com/photo-1606728035253-49e8a231d6d4">
+        <p>Broiler Chickens 🐓</p>
+    </div>
+
+    <div class="product">
+        <img src="https://images.unsplash.com/photo-1563281578-c5c8b66b1f9b">
+        <p>Country Chickens 🐔</p>
+    </div>
+
+    <h2>Contact Us</h2>
+    <p><b>📞 Phone:</b> 8639825616</p>
+
+    <h2>Place Your Order</h2>
+
+    <p class="delivery">🚚 Home Delivery Available within 30 KM</p>
+
+    <form>
+       
+        <label>Name:</label><br>
+        <input type="text" name="name" placeholder="Enter your name" required><br>
+
+        <label>Phone:</label><br>
+        <input type="tel" name="phone" placeholder="Enter your phone" required><br>
+
+        <label>Select Product:</label><br>
+        <select name="product">
+            <option>Fresh Eggs</option>
+            <option>Broiler Chicken</option>
+            <option>Country Chicken</option>
+        </select><br>
+
+        <label>Delivery Type:</label><br>
+        <select name="delivery">
+            <option>Home Delivery 🚚</option>
+            <option>Pickup from Farm 🏠</option>
+        </select><br>
+
+        <label>Delivery Address:</label><br>
+        <input type="text" name="address" placeholder="Enter your address" required><br>
+
+        <p class="note">Note: Orders outside 30 KM will not be accepted.</p>
+
+        <button type="submit">Submit Order</button>
+    </form>
+
+    <!-- WhatsApp Button -->
+    <div class="whatsapp">
+        <a href="https://wa.me/918639825616?text=Hello%20I%20want%20to%20order">
+            <button>Order on WhatsApp 📲</button>
+        </a>
+    </div>
+
+    <!-- WhatsApp Auto Message Script -->
+    <script>
+    document.querySelector("form").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        let name = document.querySelector("[name='name']").value;
+        let phone = document.querySelector("[name='phone']").value;
+        let product = document.querySelector("[name='product']").value;
+        let delivery = document.querySelector("[name='delivery']").value;
+        let address = document.querySelector("[name='address']").value;
+
+        let message = `🐔 New Order:%0A
+Name: ${name}%0A
+Phone: ${phone}%0A
+Product: ${product}%0A
+Delivery: ${delivery}%0A
+Address: ${address}`;
+
+        let whatsappURL = `https://wa.me/918639825616?text=${message}`;
+
+        window.open(whatsappURL, "_blank");
+
+        this.reset();
+    });
+    </script>
+
+</body>
+</html>
